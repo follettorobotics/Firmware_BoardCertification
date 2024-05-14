@@ -47,17 +47,10 @@ void TCPHandler::messageHandle(){
     if (requestSize != 0){
         Dispatcher& dispatch = Dispatcher::getInstance();
 
-        BitStuffing& bitStuffing = BitStuffing::getInstance(); 
-        unStuffedReqSize = bitStuffing.removeBitStuffing(request, requestSize, unStuffedReq);
-
         byte response[20] = {0, };
         size_t responseSize = 0;
 
         responseSize = dispatch.dispatch(unStuffedReq, unStuffedReqSize, response);
-
-        byte stuffedRsp[20];
-        size_t sstuffedRspSize; 
-        sstuffedRspSize = bitStuffing.applyBitStuffing(response, responseSize, stuffedRsp);
 
         sendMessageToClient(stuffedRsp, sstuffedRspSize); 
     }

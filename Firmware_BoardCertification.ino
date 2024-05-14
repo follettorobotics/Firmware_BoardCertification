@@ -4,6 +4,8 @@
 #include <Dhcp.h>
 
 #include "Communication/tcp_handler.h"
+#include "Device/Sensor/sensorHandler.h"
+#include "Device/Relay/relayHandler.h"
 
 #define SERVER_PORT 502
 #define sspin       53
@@ -19,6 +21,14 @@ void setup()
     Ethernet.init(sspin);
 
     tcpHandler.begin(mac, ip);
+
+    // sensor initial
+    SensorHandler& sensorHandler = SensorHandler::getInstance();
+    sensorHandler.initialSensorHandler(); 
+
+    // relay initial
+    Serial.println("relay");
+    RelaySetup::initializePins(); 
 }
 
 void loop()

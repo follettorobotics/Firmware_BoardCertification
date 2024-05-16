@@ -10,9 +10,12 @@ bool ExternalMotorHandler::execute(){
 
 size_t ExternalMotorHandler::response(byte* exMotorControlRsp){
     size_t index = 0;
+    exMotorControlRsp[index++] = startByte;
+    exMotorControlRsp[index++] = externalMotorRspCommand;
     exMotorControlRsp[index++] = motorNumber;
     exMotorControlRsp[index++] = motorDir;
     exMotorControlRsp[index++] = motorStep & 0xFF;  
-    exMotorControlRsp[index++] = (motorStep >> 8) & 0xFF;       
+    exMotorControlRsp[index++] = (motorStep >> 8) & 0xFF;
+    exMotorControlRsp[index++] = endByte;       
     return index; 
 }

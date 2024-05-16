@@ -6,7 +6,7 @@
 const int NUM_LOADCELLS = 8;
 
 #define startByte                   0x7E
-#define loadCellRspCommand          0xC5
+#define loadCellRspCommand          0xC4
 #define endByte                     0xAA
 
 #define PIN_PJ0     63

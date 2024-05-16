@@ -6,6 +6,8 @@
 #include "Communication/tcp_handler.h"
 #include "Device/Sensor/sensorHandler.h"
 #include "Device/Relay/relayHandler.h"
+#include "Device/LoadCell/loadcellHandler.h"
+#include "Device/Motor/externalMotor/externalMotor.h"
 
 #define SERVER_PORT 502
 #define sspin       53
@@ -29,6 +31,16 @@ void setup()
     // relay initial
     Serial.println("relay");
     RelaySetup::initializePins(); 
+
+    // loadcell initial
+    Serial.println("loadcell");
+    LoadcellSetup::initializePins(); 
+
+    // external motor initial
+    Serial.println("external motor");
+    ExternalMotorSetup::initializePins(); 
+
+    // internal motor initial
 }
 
 void loop()

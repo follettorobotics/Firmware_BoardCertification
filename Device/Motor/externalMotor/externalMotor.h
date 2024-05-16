@@ -1,6 +1,9 @@
 #ifndef EXTERNALMOTOR_H
 #define EXTERNALMOTOR_H
 
+#define startByte                   0x7E
+#define externalMotorRunRspCommand  0XC3
+#define endByte                     0xAA
 
 #define EX_MOTOR           4
 

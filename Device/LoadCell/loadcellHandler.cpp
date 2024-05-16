@@ -24,12 +24,12 @@ size_t LoadCellHandler::response(byte* loadcellRsp){
 
     for (int i = 0; i < NUM_LOADCELLS * 2; i++) {
         long value = loadcellValues[i];
-        loadcellRsp[index++] = (value >> 24) & 0xFF;
-        loadcellRsp[index++] = (value >> 16) & 0xFF;
-        loadcellRsp[index++] = (value >> 8) & 0xFF;
         loadcellRsp[index++] = value & 0xFF;
+        loadcellRsp[index++] = (value >> 8) & 0xFF;
+        loadcellRsp[index++] = (value >> 16) & 0xFF;
+        loadcellRsp[index++] = (value >> 24) & 0xFF;
     }
-    
+
     loadcellRsp[index++] = endByte;
     return index; 
 }

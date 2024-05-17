@@ -5,9 +5,9 @@
 
 #include "tcp_handler.h"
 #include "sensorHandler.h"
-#include "Relay/relayHandler.h"
-#include "LoadCell/loadcellHandler.h"
-#include "Motor/externalMotor/externalMotor.h"
+#include "relayHandler.h"
+#include "loadcellHandler.h"
+#include "externalMotor.h"
 
 #define SERVER_PORT 502
 #define sspin       53

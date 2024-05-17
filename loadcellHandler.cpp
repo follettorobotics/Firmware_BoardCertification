@@ -1,4 +1,6 @@
-#include "./loadcellHandler.h"
+#include "loadcellHandler.h"
+
+HX711 scales[NUM_LOADCELLS];
 
 bool LoadCellHandler::execute(){
     bool success = true;

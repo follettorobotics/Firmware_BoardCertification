@@ -1,6 +1,8 @@
 #ifndef EXTERNALMOTOR_H
 #define EXTERNALMOTOR_H
 
+#include <Arduino.h>
+
 #define startByte                   0x7E
 #define externalMotorRunRspCommand  0XC3
 #define endByte                     0xAA

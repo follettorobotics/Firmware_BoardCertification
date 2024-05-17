@@ -35,6 +35,26 @@
     "Includepath": null
   },
   {
+    "Sourcefile": "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\externalMotor.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\internalMotor.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\loadcellHandler.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\relayHandler.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
     "Sourcefile": "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\sensorHandler.cpp",
     "Include": "",
     "Includepath": null

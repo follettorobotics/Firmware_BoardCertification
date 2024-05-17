@@ -125,6 +125,72 @@
    "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src",
    "-IC:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\libraries\\SPI\\src",
    "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\HX711",
+   "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\loadcellHandler.cpp",
+   "-o",
+   "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\loadcellHandler.cpp.o"
+  ],
+  "file": "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\loadcellHandler.cpp"
+ },
+ {
+  "directory": "c:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification",
+  "arguments": [
+   "C:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7/bin/avr-g++",
+   "-c",
+   "-g",
+   "-Os",
+   "-w",
+   "-std=gnu++11",
+   "-fpermissive",
+   "-fno-exceptions",
+   "-ffunction-sections",
+   "-fdata-sections",
+   "-fno-threadsafe-statics",
+   "-Wno-error=narrowing",
+   "-MMD",
+   "-flto",
+   "-mmcu=atmega2560",
+   "-DF_CPU=16000000L",
+   "-DARDUINO=10607",
+   "-DARDUINO_AVR_MEGA2560",
+   "-DARDUINO_ARCH_AVR",
+   "-IC:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\cores\\arduino",
+   "-IC:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\variants\\mega",
+   "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src",
+   "-IC:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\libraries\\SPI\\src",
+   "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\HX711",
+   "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\internalMotor.cpp",
+   "-o",
+   "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\internalMotor.cpp.o"
+  ],
+  "file": "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\internalMotor.cpp"
+ },
+ {
+  "directory": "c:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification",
+  "arguments": [
+   "C:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7/bin/avr-g++",
+   "-c",
+   "-g",
+   "-Os",
+   "-w",
+   "-std=gnu++11",
+   "-fpermissive",
+   "-fno-exceptions",
+   "-ffunction-sections",
+   "-fdata-sections",
+   "-fno-threadsafe-statics",
+   "-Wno-error=narrowing",
+   "-MMD",
+   "-flto",
+   "-mmcu=atmega2560",
+   "-DF_CPU=16000000L",
+   "-DARDUINO=10607",
+   "-DARDUINO_AVR_MEGA2560",
+   "-DARDUINO_ARCH_AVR",
+   "-IC:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\cores\\arduino",
+   "-IC:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\variants\\mega",
+   "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src",
+   "-IC:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\libraries\\SPI\\src",
+   "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\HX711",
    "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\tcp_handler.cpp",
    "-o",
    "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\tcp_handler.cpp.o"
@@ -158,11 +224,11 @@
    "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src",
    "-IC:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\libraries\\SPI\\src",
    "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\HX711",
-   "C:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src\\utility\\w5100.cpp",
+   "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\externalMotor.cpp",
    "-o",
-   "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\libraries\\Ethernet\\utility\\w5100.cpp.o"
+   "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\externalMotor.cpp.o"
   ],
-  "file": "C:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src\\utility\\w5100.cpp"
+  "file": "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\externalMotor.cpp"
  },
  {
   "directory": "c:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification",
@@ -191,11 +257,11 @@
    "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src",
    "-IC:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\libraries\\SPI\\src",
    "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\HX711",
-   "C:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src\\socket.cpp",
+   "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\relayHandler.cpp",
    "-o",
-   "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\libraries\\Ethernet\\socket.cpp.o"
+   "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\relayHandler.cpp.o"
   ],
-  "file": "C:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src\\socket.cpp"
+  "file": "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\relayHandler.cpp"
  },
  {
   "directory": "c:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification",
@@ -257,11 +323,11 @@
    "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src",
    "-IC:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\libraries\\SPI\\src",
    "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\HX711",
-   "C:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src\\Dns.cpp",
+   "C:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src\\Ethernet.cpp",
    "-o",
-   "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\libraries\\Ethernet\\Dns.cpp.o"
+   "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\libraries\\Ethernet\\Ethernet.cpp.o"
   ],
-  "file": "C:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src\\Dns.cpp"
+  "file": "C:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src\\Ethernet.cpp"
  },
  {
   "directory": "c:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification",
@@ -323,6 +389,39 @@
    "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src",
    "-IC:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\libraries\\SPI\\src",
    "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\HX711",
+   "C:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src\\socket.cpp",
+   "-o",
+   "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\libraries\\Ethernet\\socket.cpp.o"
+  ],
+  "file": "C:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src\\socket.cpp"
+ },
+ {
+  "directory": "c:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification",
+  "arguments": [
+   "C:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7/bin/avr-g++",
+   "-c",
+   "-g",
+   "-Os",
+   "-w",
+   "-std=gnu++11",
+   "-fpermissive",
+   "-fno-exceptions",
+   "-ffunction-sections",
+   "-fdata-sections",
+   "-fno-threadsafe-statics",
+   "-Wno-error=narrowing",
+   "-MMD",
+   "-flto",
+   "-mmcu=atmega2560",
+   "-DF_CPU=16000000L",
+   "-DARDUINO=10607",
+   "-DARDUINO_AVR_MEGA2560",
+   "-DARDUINO_ARCH_AVR",
+   "-IC:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\cores\\arduino",
+   "-IC:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\variants\\mega",
+   "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src",
+   "-IC:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\libraries\\SPI\\src",
+   "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\HX711",
    "C:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src\\EthernetServer.cpp",
    "-o",
    "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\libraries\\Ethernet\\EthernetServer.cpp.o"
@@ -356,11 +455,44 @@
    "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src",
    "-IC:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\libraries\\SPI\\src",
    "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\HX711",
-   "C:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src\\Ethernet.cpp",
+   "C:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src\\utility\\w5100.cpp",
    "-o",
-   "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\libraries\\Ethernet\\Ethernet.cpp.o"
+   "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\libraries\\Ethernet\\utility\\w5100.cpp.o"
   ],
-  "file": "C:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src\\Ethernet.cpp"
+  "file": "C:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src\\utility\\w5100.cpp"
+ },
+ {
+  "directory": "c:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification",
+  "arguments": [
+   "C:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7/bin/avr-g++",
+   "-c",
+   "-g",
+   "-Os",
+   "-w",
+   "-std=gnu++11",
+   "-fpermissive",
+   "-fno-exceptions",
+   "-ffunction-sections",
+   "-fdata-sections",
+   "-fno-threadsafe-statics",
+   "-Wno-error=narrowing",
+   "-MMD",
+   "-flto",
+   "-mmcu=atmega2560",
+   "-DF_CPU=16000000L",
+   "-DARDUINO=10607",
+   "-DARDUINO_AVR_MEGA2560",
+   "-DARDUINO_ARCH_AVR",
+   "-IC:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\cores\\arduino",
+   "-IC:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\variants\\mega",
+   "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src",
+   "-IC:\\Users\\Owner\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\libraries\\SPI\\src",
+   "-IC:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\HX711",
+   "C:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src\\Dns.cpp",
+   "-o",
+   "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\libraries\\Ethernet\\Dns.cpp.o"
+  ],
+  "file": "C:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src\\Dns.cpp"
  },
  {
   "directory": "c:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification",

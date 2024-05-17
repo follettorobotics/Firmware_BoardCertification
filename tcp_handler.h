@@ -1,6 +1,7 @@
 #ifndef TCPHANDLER_H
 #define TCPHANDLER_H
 
+#include <Arduino.h>
 #include <Ethernet.h>
 #include "dispatch.h"
 

@@ -1,7 +1,7 @@
 #include "sensorHandler.h"
 
 SensorHandler::SensorHandler(){
-
+    
 }
 
 SensorHandler& SensorHandler::getInstance(){

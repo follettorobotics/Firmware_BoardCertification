@@ -3,7 +3,7 @@
 
 #include <Arduino.h>
 #include "sensorHandler.h"
-#include "Relay/relayHandler.h"
+#include "relayHandler.h"
 
 #define RELAY                       7
 #define EX_MOTOR                    4

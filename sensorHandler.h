@@ -1,6 +1,8 @@
 #ifndef SENSORHANDLER_H 
 #define SENSORHANDLER_H
 
+#include <Arduino.h>
+
 #define LOAD 49 // PL=PL0=49 //out
 #define DIN  48 // Q7=PL1=48 //in
 #define CLK  46 // CP=PL3=46 //out

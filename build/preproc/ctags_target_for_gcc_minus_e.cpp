@@ -9,6 +9,7 @@
 # 9 "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\Firmware_BoardCertification.ino" 2
 # 10 "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\Firmware_BoardCertification.ino" 2
 # 11 "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\Firmware_BoardCertification.ino" 2
+# 12 "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\Firmware_BoardCertification.ino" 2
 
 
 
@@ -42,9 +43,12 @@ void setup()
     ExternalMotorSetup::initializePins();
 
     // internal motor initial
+    Serial.println("internal motor");
+    InternalMotorSetup::initializePins();
 }
 
 void loop()
 {
-
+    TCPHandler& tcpHandler = TCPHandler::getInstance();
+ tcpHandler.clientHandle();
 }

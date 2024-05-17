@@ -26,6 +26,7 @@ C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\Firm
  C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\dispatch.h \
  C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\sensorHandler.h \
  C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\relayHandler.h \
+ C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\internalMotor.h \
+ C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\externalMotor.h \
  C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\loadcellHandler.h \
- C:\Users\Owner\OneDrive\πÆº≠\Arduino\libraries\HX711/HX711.h \
- C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\externalMotor.h
+ C:\Users\Owner\OneDrive\πÆº≠\Arduino\libraries\HX711/HX711.h

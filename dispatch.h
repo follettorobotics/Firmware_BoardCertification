@@ -4,6 +4,9 @@
 #include <Arduino.h>
 #include "sensorHandler.h"
 #include "relayHandler.h"
+#include "internalMotor.h"
+#include "externalMotor.h"
+#include "loadcellHandler.h"
 
 #define RELAY                       7
 #define EX_MOTOR                    4

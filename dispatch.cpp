@@ -97,13 +97,40 @@ size_t Dispatcher::dispatch(byte* request, size_t requestSize, byte* response){
         return responseIndex; 
         
     }else if(request[index] == internalMotorRunReqCommand){
-        
+        Serial.println("internal motor control dispatch");
+        index++;
+
+        byte motorNumber = request[index++];
+        byte motorDir = request[index++];
+        InternalMotorHandler* internalMotorHandler = new InternalMotorHandler(motorNumber, motorDir); 
+        internalMotorHandler->execute();
+        responseIndex = internalMotorHandler->response(response); 
+
+        delete(internalMotorHandler);
+        return responseIndex; 
         
     }else if(request[index] == externalMotorRunRspCommand){
-        
-        
+        Serial.println("external motor control dispatch");
+        index++;
+
+        byte motorNumber = request[index++];
+        byte motorDir = request[index++];
+
+        ExternalMotorHandler* externalMotorHandler = new ExternalMotorHandler(motorNumber, motorDir); 
+        externalMotorHandler->execute();
+        responseIndex = externalMotorHandler->response(response);
+        delete(externalMotorHandler);
+
+        return responseIndex;
+
     }else if(request[index] == loadCellRspCommand){
-        
+        LoadCellHandler* loadcelHandler = new LoadCellHandler();
+        loadcelHandler->execute();
+
+        responseIndex = loadcelHandler->response(response);
+        delete(loadcelHandler);
+
+        return responseIndex;
         
     }else{
         // non request 

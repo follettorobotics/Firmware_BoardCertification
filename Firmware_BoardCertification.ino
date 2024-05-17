@@ -8,6 +8,7 @@
 #include "relayHandler.h"
 #include "loadcellHandler.h"
 #include "externalMotor.h"
+#include "internalMotor.h"
 
 #define SERVER_PORT 502
 #define sspin       53
@@ -41,9 +42,12 @@ void setup()
     ExternalMotorSetup::initializePins(); 
 
     // internal motor initial
+    Serial.println("internal motor");
+    InternalMotorSetup::initializePins(); 
 }
 
 void loop()
 {
-	
+    TCPHandler& tcpHandler = TCPHandler::getInstance(); 
+	tcpHandler.clientHandle();
 }

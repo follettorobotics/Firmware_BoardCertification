@@ -5,11 +5,11 @@
 #include <Dns.h>
 #include <Dhcp.h>
 
-#include "Communication/tcp_handler.h"
-#include "Device/Sensor/sensorHandler.h"
-#include "Device/Relay/relayHandler.h"
-#include "Device/LoadCell/loadcellHandler.h"
-#include "Device/Motor/externalMotor/externalMotor.h"
+#include "tcp_handler.h"
+#include "sensorHandler.h"
+#include "Relay/relayHandler.h"
+#include "LoadCell/loadcellHandler.h"
+#include "Motor/externalMotor/externalMotor.h"
 
 #define SERVER_PORT 502
 #define sspin       53

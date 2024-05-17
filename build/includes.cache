@@ -30,6 +30,21 @@
     "Includepath": null
   },
   {
+    "Sourcefile": "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\dispatch.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\sensorHandler.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\build\\sketch\\tcp_handler.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
     "Sourcefile": "C:\\Users\\Owner\\OneDrive\\문서\\Arduino\\libraries\\Ethernet\\src\\Dhcp.cpp",
     "Include": "",
     "Includepath": null

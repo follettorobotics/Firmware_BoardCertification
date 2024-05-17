@@ -2,8 +2,8 @@
 #define DISPATCHER_H
 
 #include <Arduino.h>
-#include "../Device/Sensor/sensorHandler.h"
-#include "../Device/Relay/relayHandler.h"
+#include "sensorHandler.h"
+#include "Relay/relayHandler.h"
 
 #define RELAY                       7
 #define EX_MOTOR                    4

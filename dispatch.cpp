@@ -1,4 +1,4 @@
-#include "./dispatch.h"
+#include "dispatch.h"
 
 Dispatcher::Dispatcher() {
     
@@ -52,47 +52,7 @@ size_t Dispatcher::dispatch(byte* request, size_t requestSize, byte* response){
         response[responseIndex++] = endByte;
         
         return responseIndex; 
-    }else if (request[index] == relayHandlerReqCommand){
-        Serial.println("relay control with time dispatch"); 
-        // relay 
-        index++; 
-
-        // relay number
-        int relayNumber = request[index++];
-
-        if (relayNumber < 1 || relayNumber > RELAY){
-
-            response[responseIndex++] = startByte;
-            response[responseIndex++] = relayHandlerErrorCommand;
-            response[responseIndex++] = relayNumberErrorByte;
-            response[responseIndex++] = endByte;
-
-            return responseIndex; 
-        }
-
-
-        // Relay Handler
-        byte integerTime = request[index++];
-        byte fractionalTime = request[index++]; 
-        
-        // controlTime: millisec 
-        unsigned long controlTime = hexToDecimal(integerTime, fractionalTime);
-
-        bool on = false; 
-
-        // relayHandler instance 
-        RelayHandler* relayHandler = new RelayHandler(relayNumber, controlTime, on);
-        relayHandler->execute();
-
-        responseIndex = relayHandler->response(response); 
-
-        delete(relayHandler); 
-        return responseIndex;
-
-    }else if (request[index] == motorRunReqCommand){
-        
-
-    }else if(request[index] == relayOnOffReqCommand){
+    }else if(request[index] == relayHandlerReqCommand){
         Serial.println("relay on/off handler");
         index++;
 
@@ -129,12 +89,21 @@ size_t Dispatcher::dispatch(byte* request, size_t requestSize, byte* response){
 
         //response
         response[responseIndex++] = startByte;
-        response[responseIndex++] = relayOnOffRspCommand;
+        response[responseIndex++] = relayHandlerRspCommand;
         response[responseIndex++] = relayNumber;
         response[responseIndex++] = relayControl;
         response[responseIndex++] = endByte;
 
         return responseIndex; 
+        
+    }else if(request[index] == internalMotorRunReqCommand){
+        
+        
+    }else if(request[index] == externalMotorRunRspCommand){
+        
+        
+    }else if(request[index] == loadCellRspCommand){
+        
         
     }else{
         // non request 

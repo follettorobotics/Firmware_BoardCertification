@@ -1,8 +1,7 @@
-#line 1 "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\Device\\Sensor\\sensorHandler.cpp"
-#include "./sensorHandler.h"
+#include "sensorHandler.h"
 
-SensorHandler::SensorHandler() {
-    
+SensorHandler::SensorHandler(){
+
 }
 
 SensorHandler& SensorHandler::getInstance(){

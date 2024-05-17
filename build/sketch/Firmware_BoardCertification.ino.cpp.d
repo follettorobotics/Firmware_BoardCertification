@@ -22,12 +22,10 @@ C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\Firm
  C:\Users\Owner\OneDrive\πÆº≠\Arduino\libraries\Ethernet\src/Dns.h \
  C:\Users\Owner\OneDrive\πÆº≠\Arduino\libraries\Ethernet\src/Ethernet.h \
  C:\Users\Owner\OneDrive\πÆº≠\Arduino\libraries\Ethernet\src/Dhcp.h \
- C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\Communication/tcp_handler.h \
- c:\users\owner\onedrive\πŸ≈¡\ »≠∏È\firmware_boardcertification\build\sketch\messagehandle\dispatch.h \
- c:\users\owner\onedrive\πŸ≈¡\ »≠∏È\firmware_boardcertification\build\sketch\device\sensor\sensorhandler.h \
- c:\users\owner\onedrive\πŸ≈¡\ »≠∏È\firmware_boardcertification\build\sketch\device\relay\relayhandler.h \
- C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\Device/Sensor/sensorHandler.h \
- C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\Device/Relay/relayHandler.h \
- C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\Device/LoadCell/loadcellHandler.h \
+ C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\tcp_handler.h \
+ C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\dispatch.h \
+ C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\sensorHandler.h \
+ C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\Relay/relayHandler.h \
+ C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\LoadCell/loadcellHandler.h \
  C:\Users\Owner\OneDrive\πÆº≠\Arduino\libraries\HX711/HX711.h \
- C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\Device/Motor/externalMotor/externalMotor.h
+ C:\Users\Owner\OneDrive\πŸ≈¡\ »≠∏È\Firmware_BoardCertification\build\sketch\Motor/externalMotor/externalMotor.h

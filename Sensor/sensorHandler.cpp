@@ -1,8 +1,4 @@
-#include "./sensorHandler.h"
-
-SensorHandler::SensorHandler() {
-    
-}
+#include "../Sensor/sensorHandler.h"
 
 SensorHandler& SensorHandler::getInstance(){
     static SensorHandler instance;

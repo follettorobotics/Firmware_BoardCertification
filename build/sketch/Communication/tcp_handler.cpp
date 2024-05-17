@@ -1,4 +1,4 @@
-#line 1 "C:\\Users\\escap\\Desktop\\board_certification\\Firmware_BoardCertification\\Communication\\tcp_handler.cpp"
+#line 1 "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\Communication\\tcp_handler.cpp"
 #include "./tcp_handler.h"
 
 uint16_t TCPHandler::port = 502;
@@ -53,7 +53,7 @@ void TCPHandler::messageHandle(){
 
         responseSize = dispatch.dispatch(unStuffedReq, unStuffedReqSize, response);
 
-        sendMessageToClient(stuffedRsp, sstuffedRspSize); 
+        sendMessageToClient(response, responseSize); 
     }
 
 }

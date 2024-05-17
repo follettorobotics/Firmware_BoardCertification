@@ -1,8 +1,9 @@
-#line 1 "C:\\Users\\escap\\Desktop\\board_certification\\Firmware_BoardCertification\\Communication\\tcp_handler.h"
+#line 1 "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\Communication\\tcp_handler.h"
 #ifndef TCPHANDLER_H
 #define TCPHANDLER_H
 
 #include <Ethernet.h>
+#include "../MessageHandle/dispatch.h"
 
 // TCPHandler singleton pattern 
 class TCPHandler{

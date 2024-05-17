@@ -52,7 +52,7 @@ void TCPHandler::messageHandle(){
 
         responseSize = dispatch.dispatch(unStuffedReq, unStuffedReqSize, response);
 
-        sendMessageToClient(stuffedRsp, sstuffedRspSize); 
+        sendMessageToClient(response, responseSize); 
     }
 
 }

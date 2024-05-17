@@ -2,6 +2,7 @@
 #define TCPHANDLER_H
 
 #include <Ethernet.h>
+#include "../MessageHandle/dispatch.h"
 
 // TCPHandler singleton pattern 
 class TCPHandler{

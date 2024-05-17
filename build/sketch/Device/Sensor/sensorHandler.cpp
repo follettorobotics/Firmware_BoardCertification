@@ -1,4 +1,4 @@
-#line 1 "C:\\Users\\escap\\Desktop\\board_certification\\Firmware_BoardCertification\\Device\\Sensor\\sensorHandler.cpp"
+#line 1 "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\Device\\Sensor\\sensorHandler.cpp"
 #include "./sensorHandler.h"
 
 SensorHandler::SensorHandler() {

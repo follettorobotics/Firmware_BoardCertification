@@ -1,0 +1,51 @@
+# Compiled Object files
+*.o
+*.so
+*.ko
+*.obj
+*.elf
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Binary files
+*.exe
+*.dll
+*.deb
+*.rpm
+*.iso
+*.dmg
+*.img
+
+# Backup & Log files
+*.bak
+*.log
+*.sql
+*.sqlite
+
+# Editor directories and files
+*.idea/
+*.vscode/
+*.cproject
+*.project
+*.settings/
+
+# Build output directories
+bin/
+obj/
+out/
+build/
+
+# Dependency directories (comment out if dependencies are tracked)
+# node_modules/
+# vendor/
+
+# Ignore specific file in a specific folder
+.vscode/c_cpp_properties.json

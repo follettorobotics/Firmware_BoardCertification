@@ -1,6 +1,8 @@
 #ifndef EXTERNALMOTOR_H
 #define EXTERNALMOTOR_H
 
+#include <Arduino.h>
+
 #define startByte                   0x7E
 #define externalMotorRunRspCommand  0XC3
 #define endByte                     0xAA
@@ -52,7 +54,7 @@ private:
 
     uint8_t motorNumber;
     uint8_t motorDir;     
-    uint16_t motorStep = 50000;
+    uint16_t motorStep = 1000;
 
     uint8_t dirPin; 
     uint8_t pwmPin;

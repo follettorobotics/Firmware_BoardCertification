@@ -1,8 +1,7 @@
-#line 1 "C:\\Users\\escap\\Desktop\\board_certification\\Firmware_BoardCertification\\.vscode\\arduino.json"
+#line 1 "C:\\Users\\Owner\\OneDrive\\바탕 화면\\Firmware_BoardCertification\\.vscode\\arduino.json"
 {
     "sketch": "Firmware_BoardCertification.ino",
     "output": "build",
     "configuration": "cpu=atmega2560",
-    "board": "arduino:avr:mega",
-    "programmer": "usbasp"
+    "board": "arduino:avr:mega"
 }

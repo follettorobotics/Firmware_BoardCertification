@@ -1,6 +1,7 @@
-#line 1 "C:\\Users\\escap\\Desktop\\board_certification\\Firmware_BoardCertification\\Device\\Sensor\\sensorHandler.h"
 #ifndef SENSORHANDLER_H 
 #define SENSORHANDLER_H
+
+#include <Arduino.h>
 
 #define LOAD 49 // PL=PL0=49 //out
 #define DIN  48 // Q7=PL1=48 //in

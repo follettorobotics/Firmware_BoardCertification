@@ -2,6 +2,7 @@
 #define LOADCELLHANDLER_H
 
 #include <HX711.h>
+#include <Arduino.h>
 
 const int NUM_LOADCELLS = 8;
 
@@ -31,10 +32,9 @@ const int LOADCELL_DOUT_PINS[NUM_LOADCELLS] = {
 		PIN_PJ2,
 		PIN_PJ1,
 		PIN_PJ0
-
 };
 
-HX711 scales[NUM_LOADCELLS];
+extern HX711 scales[NUM_LOADCELLS];
 
 class LoadcellSetup{
 public:

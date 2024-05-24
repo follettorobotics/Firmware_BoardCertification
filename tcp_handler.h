@@ -1,7 +1,9 @@
 #ifndef TCPHANDLER_H
 #define TCPHANDLER_H
 
+#include <Arduino.h>
 #include <Ethernet.h>
+#include "dispatch.h"
 
 // TCPHandler singleton pattern 
 class TCPHandler{

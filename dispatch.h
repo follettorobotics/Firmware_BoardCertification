@@ -1,10 +1,12 @@
-#line 1 "C:\\Users\\escap\\Desktop\\board_certification\\Firmware_BoardCertification\\MessageHandle\\dispatch.h"
 #ifndef DISPATCHER_H
 #define DISPATCHER_H
 
 #include <Arduino.h>
-#include "../Device/Sensor/sensorHandler.h"
-#include "../Device/Relay/relayHandler.h"
+#include "sensorHandler.h"
+#include "relayHandler.h"
+#include "internalMotor.h"
+#include "externalMotor.h"
+#include "loadcellHandler.h"
 
 #define RELAY                       7
 #define EX_MOTOR                    4

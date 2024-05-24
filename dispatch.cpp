@@ -1,4 +1,4 @@
-#include "./dispatch.h"
+#include "dispatch.h"
 
 Dispatcher::Dispatcher() {
     
@@ -14,7 +14,6 @@ size_t Dispatcher::dispatch(byte* request, size_t requestSize, byte* response){
     size_t index = 0; 
 
      if (request[index] != startByte){
-        Serial.println("start byte error"); 
         // start byte error
         response[responseIndex++] = startByte;
         response[responseIndex++] = startByteErrorCommand;
@@ -36,7 +35,6 @@ size_t Dispatcher::dispatch(byte* request, size_t requestSize, byte* response){
     index++; 
 
     if (request[index] == sensorReandReqCommand){
-        Serial.println("sensor request dispatch"); 
         // sensor read
         // call class SensorHandler
         SensorHandler& sensorHandler = SensorHandler::getInstance();
@@ -52,47 +50,7 @@ size_t Dispatcher::dispatch(byte* request, size_t requestSize, byte* response){
         response[responseIndex++] = endByte;
         
         return responseIndex; 
-    }else if (request[index] == relayHandlerReqCommand){
-        Serial.println("relay control with time dispatch"); 
-        // relay 
-        index++; 
-
-        // relay number
-        int relayNumber = request[index++];
-
-        if (relayNumber < 1 || relayNumber > RELAY){
-
-            response[responseIndex++] = startByte;
-            response[responseIndex++] = relayHandlerErrorCommand;
-            response[responseIndex++] = relayNumberErrorByte;
-            response[responseIndex++] = endByte;
-
-            return responseIndex; 
-        }
-
-
-        // Relay Handler
-        byte integerTime = request[index++];
-        byte fractionalTime = request[index++]; 
-        
-        // controlTime: millisec 
-        unsigned long controlTime = hexToDecimal(integerTime, fractionalTime);
-
-        bool on = false; 
-
-        // relayHandler instance 
-        RelayHandler* relayHandler = new RelayHandler(relayNumber, controlTime, on);
-        relayHandler->execute();
-
-        responseIndex = relayHandler->response(response); 
-
-        delete(relayHandler); 
-        return responseIndex;
-
-    }else if (request[index] == motorRunReqCommand){
-        
-
-    }else if(request[index] == relayOnOffReqCommand){
+    }else if(request[index] == relayHandlerReqCommand){
         Serial.println("relay on/off handler");
         index++;
 
@@ -129,12 +87,52 @@ size_t Dispatcher::dispatch(byte* request, size_t requestSize, byte* response){
 
         //response
         response[responseIndex++] = startByte;
-        response[responseIndex++] = relayOnOffRspCommand;
+        response[responseIndex++] = relayHandlerRspCommand;
         response[responseIndex++] = relayNumber;
         response[responseIndex++] = relayControl;
         response[responseIndex++] = endByte;
 
         return responseIndex; 
+        
+    }else if(request[index] == internalMotorRunReqCommand){
+        Serial.println("internal motor control dispatch");
+        index++;
+
+        byte motorNumber = request[index++];
+        motorNumber--; 
+        byte motorDir = request[index++];
+
+        InternalMotorHandler* internalMotorHandler = new InternalMotorHandler(motorNumber, motorDir); 
+        internalMotorHandler->execute();
+        responseIndex = internalMotorHandler->response(response); 
+
+        delete(internalMotorHandler);
+        return responseIndex; 
+        
+    }else if(request[index] == externalMotorRunReqCommand){
+        index++;
+
+        byte motorNumber = request[index++];
+
+        motorNumber--; 
+
+        byte motorDir = request[index++];
+
+        ExternalMotorHandler* externalMotorHandler = new ExternalMotorHandler(motorNumber, motorDir); 
+        externalMotorHandler->execute();
+        responseIndex = externalMotorHandler->response(response);
+        delete(externalMotorHandler);
+
+        return responseIndex;
+
+    }else if(request[index] == loadCellReqCommand){
+        LoadCellHandler* loadcelHandler = new LoadCellHandler();
+        loadcelHandler->execute();
+
+        responseIndex = loadcelHandler->response(response);
+        delete(loadcelHandler);
+
+        return responseIndex;
         
     }else{
         // non request 

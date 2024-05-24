@@ -1,5 +1,4 @@
-#line 1 "C:\\Users\\escap\\Desktop\\board_certification\\Firmware_BoardCertification\\Device\\Relay\\relayHandler.cpp"
-#include "./RelayHandler.h"
+#include "relayHandler.h"
 
 bool RelayHandler::execute(){
 

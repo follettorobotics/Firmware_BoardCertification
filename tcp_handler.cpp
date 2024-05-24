@@ -1,5 +1,4 @@
-#line 1 "C:\\Users\\escap\\Desktop\\board_certification\\Firmware_BoardCertification\\Communication\\tcp_handler.cpp"
-#include "./tcp_handler.h"
+#include "tcp_handler.h"
 
 uint16_t TCPHandler::port = 502;
 
@@ -10,6 +9,17 @@ TCPHandler& TCPHandler::getInstance(){
 
 void TCPHandler::begin(byte mac[], IPAddress ip){
     Ethernet.begin(mac, ip);
+
+    if (Ethernet.hardwareStatus() == EthernetNoHardware) {
+      Serial.println("Ethernet shield not found.");
+      while (true) {
+        delay(1); // 무한 루프
+      }
+    }
+    if (Ethernet.linkStatus() == LinkOFF) {
+      Serial.println("Ethernet cable is not connected.");
+    }
+
     TCPserver.begin();
 }
 
@@ -29,11 +39,8 @@ void TCPHandler::clientHandle(){
 }
 
 void TCPHandler::messageHandle(){
-    byte request[20];
+    byte request[20] {0, };
     size_t requestSize = 0;
-
-    byte unStuffedReq[20];
-    size_t unStuffedReqSize = 0; 
 
     // check the data 
     // if the client disconnected, client.available() return 0
@@ -51,9 +58,9 @@ void TCPHandler::messageHandle(){
         byte response[20] = {0, };
         size_t responseSize = 0;
 
-        responseSize = dispatch.dispatch(unStuffedReq, unStuffedReqSize, response);
+        responseSize = dispatch.dispatch(request, requestSize, response);
 
-        sendMessageToClient(stuffedRsp, sstuffedRspSize); 
+        sendMessageToClient(response, responseSize); 
     }
 
 }

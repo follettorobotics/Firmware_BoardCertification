@@ -1,7 +1,6 @@
-#line 1 "C:\\Users\\escap\\Desktop\\board_certification\\Firmware_BoardCertification\\Device\\Sensor\\sensorHandler.cpp"
-#include "./sensorHandler.h"
+#include "sensorHandler.h"
 
-SensorHandler::SensorHandler() {
+SensorHandler::SensorHandler(){
     
 }
 

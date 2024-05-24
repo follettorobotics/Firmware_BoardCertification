@@ -16,14 +16,16 @@
 // Request
 #define sensorReandReqCommand       0xB0 
 #define relayHandlerReqCommand      0xB1
-#define motorRunReqCommand          0xB2
-#define relayOnOffReqCommand        0xB3
+#define internalMotorRunReqCommand  0xB2
+#define externalMotorRunReqCommand  0xB3
+#define loadCellReqCommand          0xB4
 
 // Response 
 #define sensorReadRspCommand        0xC0
 #define relayHandlerRspCommand      0xC1
-#define motorRunRspCommand          0XC2
-#define relayOnOffRspCommand        0xC3
+#define internalMotorRunRspCommand  0XC2
+#define externalMotorRunRspCommand  0XC3
+#define loadCellRspCommand          0xC4
 
 // Error code command
 #define startByteErrorCommand       0xE0

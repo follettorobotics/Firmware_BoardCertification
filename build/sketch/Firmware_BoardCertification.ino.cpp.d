@@ -24,4 +24,7 @@ C:\Users\escap\Desktop\board_certification\Firmware_BoardCertification\build\ske
  C:\Users\escap\Documents\Arduino\libraries\Ethernet\src/Dhcp.h \
  C:\Users\escap\Desktop\board_certification\Firmware_BoardCertification\build\sketch\Communication/tcp_handler.h \
  C:\Users\escap\Desktop\board_certification\Firmware_BoardCertification\build\sketch\Device/Sensor/sensorHandler.h \
- C:\Users\escap\Desktop\board_certification\Firmware_BoardCertification\build\sketch\Device/Relay/relayHandler.h
+ C:\Users\escap\Desktop\board_certification\Firmware_BoardCertification\build\sketch\Device/Relay/relayHandler.h \
+ C:\Users\escap\Desktop\board_certification\Firmware_BoardCertification\build\sketch\Device/LoadCell/loadcellHandler.h \
+ C:\Users\escap\Documents\Arduino\libraries\HX711/HX711.h \
+ C:\Users\escap\Desktop\board_certification\Firmware_BoardCertification\build\sketch\Device/Motor/externalMotor/externalMotor.h

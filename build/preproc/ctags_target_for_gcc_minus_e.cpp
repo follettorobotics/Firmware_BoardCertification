@@ -7,6 +7,8 @@
 # 7 "C:\\Users\\escap\\Desktop\\board_certification\\Firmware_BoardCertification\\Firmware_BoardCertification.ino" 2
 # 8 "C:\\Users\\escap\\Desktop\\board_certification\\Firmware_BoardCertification\\Firmware_BoardCertification.ino" 2
 # 9 "C:\\Users\\escap\\Desktop\\board_certification\\Firmware_BoardCertification\\Firmware_BoardCertification.ino" 2
+# 10 "C:\\Users\\escap\\Desktop\\board_certification\\Firmware_BoardCertification\\Firmware_BoardCertification.ino" 2
+# 11 "C:\\Users\\escap\\Desktop\\board_certification\\Firmware_BoardCertification\\Firmware_BoardCertification.ino" 2
 
 
 
@@ -30,6 +32,16 @@ void setup()
     // relay initial
     Serial.println("relay");
     RelaySetup::initializePins();
+
+    // loadcell initial
+    Serial.println("loadcell");
+    LoadcellSetup::initializePins();
+
+    // external motor initial
+    Serial.println("external motor");
+    ExternalMotorSetup::initializePins();
+
+    // internal motor initial
 }
 
 void loop()

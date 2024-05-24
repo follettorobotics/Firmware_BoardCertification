@@ -21,6 +21,11 @@
   },
   {
     "Sourcefile": "C:\\Users\\escap\\Desktop\\board_certification\\Firmware_BoardCertification\\build\\sketch\\Firmware_BoardCertification.ino.cpp",
+    "Include": "HX711.h",
+    "Includepath": "C:\\Users\\escap\\Documents\\Arduino\\libraries\\HX711"
+  },
+  {
+    "Sourcefile": "C:\\Users\\escap\\Desktop\\board_certification\\Firmware_BoardCertification\\build\\sketch\\Firmware_BoardCertification.ino.cpp",
     "Include": "",
     "Includepath": null
   },
@@ -66,6 +71,11 @@
   },
   {
     "Sourcefile": "C:\\Users\\escap\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\libraries\\SPI\\src\\SPI.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\escap\\Documents\\Arduino\\libraries\\HX711\\HX711.cpp",
     "Include": "",
     "Includepath": null
   }

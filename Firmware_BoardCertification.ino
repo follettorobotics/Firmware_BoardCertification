@@ -21,7 +21,7 @@ TCPHandler& tcpHandler = TCPHandler::getInstance();
 void setup()
 {
 	Serial.begin(115200);
-    Ethernet.init(sspin);
+    Ethernet.init(PIN_SPI_SS);
 
     tcpHandler.begin(mac, ip);
     Serial.print("IP: ");
@@ -39,7 +39,9 @@ void setup()
 
     // loadcell initial
     Serial.println("loadcell");
-    LoadcellSetup::initializePins(); 
+    for (int i=0; i<NUM_LOADCELLS; i++){
+        LoadcellSetup::initializePins(i);
+    }
 
     // external motor initial
     Serial.println("external motor");
@@ -48,6 +50,8 @@ void setup()
     // internal motor initial
     Serial.println("internal motor");
     InternalMotorSetup::initializePins(); 
+
+    Serial.println("ends"); 
 }
 
 void loop()

@@ -127,7 +127,9 @@ size_t Dispatcher::dispatch(byte* request, size_t requestSize, byte* response){
 
     }else if(request[index] == loadCellReqCommand){
         LoadCellHandler* loadcelHandler = new LoadCellHandler();
-        loadcelHandler->execute();
+        for (int i=0; i<NUM_LOADCELLS; i++){
+            loadcelHandler->execute(i);
+        }
 
         responseIndex = loadcelHandler->response(response);
         delete(loadcelHandler);

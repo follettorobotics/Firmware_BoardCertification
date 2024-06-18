@@ -55,7 +55,7 @@ void TCPHandler::messageHandle(){
     if (requestSize != 0){
         Dispatcher& dispatch = Dispatcher::getInstance();
 
-        byte response[20] = {0, };
+        byte response[100] = {0, };
         size_t responseSize = 0;
 
         responseSize = dispatch.dispatch(request, requestSize, response);

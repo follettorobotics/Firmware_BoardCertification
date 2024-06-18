@@ -1,35 +1,23 @@
-#include "loadcellHandler.h"
+#include "LoadCellHandler.h"
 
 HX711 scales[NUM_LOADCELLS];
 
-bool LoadCellHandler::execute() {
+bool LoadCellHandler::execute(int loadcellIndex) {
     bool success = true;
-    for (int i = 0; i < NUM_LOADCELLS; i++) {
-        if (scales[i].is_ready()) {
-            scales[i].set_gain(128); // Ensure correct gain is set before reading
-            delay(50); // Increase delay to ensure stable reading
 
-            loadcellValues[i * 2] = scales[i].read();
-            Serial.print("Load Cell ");
-            Serial.print(i + 1);
-            Serial.print(" value (gain 128): ");
-            Serial.println(loadcellValues[i * 2]); 
+    // 로드셀 초기화 및 테어링
+    LoadcellSetup::initializePins(loadcellIndex);
 
-            scales[i].set_gain(32);
-            delay(50); // Increase delay to ensure stable reading
+    // 로드셀 값 읽기
+    loadcellValues[loadcellIndex] = scales[loadcellIndex].get_units(1);
+    Serial.print("Load Cell ");
+    Serial.print(loadcellIndex + 1);
+    Serial.print(": ");
+    Serial.print(loadcellValues[loadcellIndex]);
+    Serial.println(" units ");
+    
+    delay(10);
 
-            loadcellValues[i * 2 + 1] = scales[i].read();
-            Serial.print("Load Cell ");
-            Serial.print(i + 1);
-            Serial.print(" value (gain 32): ");
-            Serial.println(loadcellValues[i * 2 + 1]); 
-        } else {
-            Serial.print("Load Cell ");
-            Serial.print(i + 1);
-            Serial.println(" is not ready.");
-            success = false;
-        }
-    }
     return success;
 }
 
@@ -38,14 +26,14 @@ size_t LoadCellHandler::response(byte* loadcellRsp) {
     loadcellRsp[index++] = startByte; 
     loadcellRsp[index++] = loadCellRspCommand;
 
-    for (int i = 0; i < NUM_LOADCELLS * 2; i++) {
-        long value = loadcellValues[i];
-        loadcellRsp[index++] = value & 0xFF;
-        loadcellRsp[index++] = (value >> 8) & 0xFF;
-        loadcellRsp[index++] = (value >> 16) & 0xFF;
-        loadcellRsp[index++] = (value >> 24) & 0xFF;
+    for (int i = 0; i < NUM_LOADCELLS; i++) {
+        float value = loadcellValues[i];
+        byte* bytePointer = (byte*) &value;  
+        for (int j = 0; j < sizeof(float); j++) {
+            loadcellRsp[index++] = bytePointer[j];
+        }
     }
-
     loadcellRsp[index++] = endByte;
     return index; 
 }
+

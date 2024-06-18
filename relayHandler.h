@@ -9,7 +9,7 @@
 #define relayHandlerRspCommand      0xC1
 #define endByte                     0xAA
 
-const uint8_t relayPins[RELAY] = {22,23,24,25,26,27,28}; // PA0~6 
+const uint8_t relayPins[RELAY] = {22,23,24,25,26,27,28};  
 
 // Relay setup class 
 class RelaySetup {
@@ -24,7 +24,6 @@ public:
 
 class RelayHandler {
 private:
-
     int relayNumber; 
     // relayPin determined by relayNumber
     uint8_t relayPin;

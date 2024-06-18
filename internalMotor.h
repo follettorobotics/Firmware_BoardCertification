@@ -3,6 +3,9 @@
 
 #include <Arduino.h>
 
+#define SET_BIT(port, bit) ((port) |= (1 << (bit)))
+#define CLEAR_BIT(port, bit) ((port) &= ~(1 << (bit)))
+
 #define startByte                   0x7E
 #define internalMotorRunRspCommand  0XC2
 #define endByte                     0xAA
@@ -11,7 +14,6 @@
 #define BUITIN_MOTOR_EN             39
 
 // motor DIR, PWM
-#define PIN_PE6     33
 #define PIN_PH4     7
 
 #define PIN_PE7     32
@@ -35,12 +37,12 @@ struct MotorPins{
 };
 
 const MotorPins motorPinAddress[MOTOR] = {
-    {PIN_PE6,PIN_PH4}, 
-    {PIN_PE7,PIN_PH5},
-    {PIN_PL6,PIN_PE5}, 
-    {PIN_PL7,PIN_PH3}, 
-    {PIN_PE2,PIN_PE3},
-    {PIN_PH7,PIN_PE4} 
+    {71,PIN_PH4}, 
+    {72,PIN_PH5},
+    {PIN_PL6,PIN_PE5}, // DIR, PIN right 
+    {PIN_PL7,PIN_PH3}, // DIR, PIN right 
+    {70, PIN_PE3},
+    {74,PIN_PE4} 
 }; 
 
 // internal motor setup class 
@@ -88,24 +90,31 @@ public:
         }else {
             if (motorDir != 0x00){
                 if (motorNumber == 0){ 
-                    PORTE |= 0b01000000; 
+                    SET_BIT(PORTE, 6); 
                 }else if(motorNumber == 1){
-                    PORTE |= 0b10000000; 
+                    // PORTE |= 0b10000000; 
+                    SET_BIT(PORTE, 7); 
                 }else if(motorNumber == 4){
-                    PORTE |= 0b00000100; 
+                    // PORTE |= 0b00000100; 
+                    SET_BIT(PORTE, 2); 
                 }else if(motorNumber == 5){
-                    PORTH |= 0b10000000; 
+                    // PORTH |= 0b10000000; 
+                    SET_BIT(PORTH, 7); 
                 }
             }else {
                 if(motorNumber == 0){
-                    PORTE &= 0b10111111; //off
+                    CLEAR_BIT(PORTE, 6); 
                 }else if(motorNumber == 1){
-                    PORTE &= 0b01111111; //off
+                    CLEAR_BIT(PORTE, 7); 
+                    // PORTE &= 0b01111111; //off
                 }else if(motorNumber == 4){
-                    PORTE &= 0b11111011; //off
+                    CLEAR_BIT(PORTE, 2); 
+                    // PORTE &= 0b11111011; //off
                 }else if(motorNumber == 5){
-                    PORTH &= 0b01111111; //off
+                    CLEAR_BIT(PORTH, 7); 
+                    // PORTH &= 0b01111111; //off
                 }
+                
             }
         }
     }

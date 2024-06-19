@@ -21,7 +21,7 @@ const int NUM_LOADCELLS = 16;
 #define DOUT_5          38
 #define DOUT_6          82
 #define DOUT_7          79
-#define DOUT_8          83
+#define DOUT_8          83 
 #define DOUT_9          45
 #define DOUT_10         80
 #define DOUT_11         73
@@ -92,20 +92,22 @@ extern HX711 scales[NUM_LOADCELLS];
 
 class LoadcellSetup {
 public:
-    static void initializePins(int index) {
+    static bool initializePins(int index) {
         scales[index].begin(LOADCELL_DOUT_PINS[index], LOADCELL_SCK_PINS[index]);
-        scales[index].set_scale();
+        scales[index].set_scale(-7050.0);
+        scales[index].tare();
 
-        if (scales[index].is_ready()) {
-            scales[index].tare();
-            Serial.print("Load Cell ");
-            Serial.print(index + 1);
-            Serial.println(": Tare completed.");
-        } else {
-            Serial.print("Load Cell ");
-            Serial.print(index + 1);
-            Serial.println(": Not ready, skipping tare.");
-        }
+        // if (scales[index].is_ready()) {
+        //     scales[index].set_scale(-7052.0);
+        //     scales[index].tare();
+        //     Serial.print("Load Cell ");
+        //     Serial.print(index + 1);
+        //     Serial.println(": Tare completed.");
+        // } else {
+        //     Serial.print("Load Cell ");
+        //     Serial.print(index + 1);
+        //     Serial.println(": Not ready, skipping tare.");
+        // }
         delay(100);
     }
 };
@@ -113,15 +115,17 @@ public:
 class LoadCellHandler {
 private:
     float loadcellValues[NUM_LOADCELLS];
+    byte loadcellTarget; 
 
 public:
-    LoadCellHandler() {
+    LoadCellHandler(byte loadcellNumber)
+        :  loadcellTarget(loadcellNumber) {
         for (int i = 0; i < NUM_LOADCELLS; i++) {
             loadcellValues[i] = 0.0;
         }
     }
 
-    bool execute(int loadcellIndex);
+    bool execute();
     size_t response(byte* loadcellRsp);
 };
 

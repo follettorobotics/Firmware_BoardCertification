@@ -66,6 +66,12 @@ void TCPHandler::messageHandle(){
 }
 
 bool TCPHandler::sendMessageToClient(const byte* message, size_t size){
+  // Serial.print("response: "); 
+  // for (int i=0; i<size; i++){
+  //   Serial.print(message[i]);
+  //   Serial.print(" "); 
+  // }
+  // Serial.println(); 
     if (TCPclient.connected()){
         TCPclient.write(message, size);
         return true; 
